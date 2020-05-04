@@ -1,0 +1,24 @@
+@import "./default.module.scss";
+.navbar__purple {
+ background:$purple_color;        
+}
+
+.navbarBrand__white {
+               color:white;
+}
+
+.navbarBrand__white:hover {
+  color:white;
+}
+
+.navlink__purple {
+  color:white !important;
+}
+
+.navbar__toggle_button {
+  color:$purple_color;
+  border:1px solid white;
+  background:white;
+  border-radius:0px;
+}
+

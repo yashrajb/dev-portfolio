@@ -1,0 +1,36 @@
+@import "./default.module.scss";
+
+
+
+.blog_readmore {
+    color:white;
+    padding:0px;
+    margin:0px;
+}
+
+
+.blog_readmore:hover {
+    color:white;
+}
+
+.blog__h1 {
+    text-transform: capitalize;
+    font-size: 30px;
+    color: black;
+    text-decoration: underline
+}
+
+ol {
+list-style:none
+}
+
+.blog__element {
+    margin:40px 0px 30px 0px;
+    box-shadow:0px 3px 3px white;
+    padding:20px;      
+    background:$purple_color;
+    border-radius:10px;
+    color:white;
+    border:1px solid white;
+                                     
+}

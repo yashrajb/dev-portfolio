@@ -1,0 +1,54 @@
+
+@import "./default.module.scss";
+
+.main {
+  padding: 100px 0px;
+  border: 0px;
+}
+.text {
+  margin: 150px 0px;
+}
+.main__h1 {
+  font-size:50px;
+  color: white;
+}
+
+.main__btn-default {
+  border-radius: 0px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+.main__btn-default:hover {
+  background-color: white;
+  border: 1px solid white;
+  color: $purple_color;
+}
+
+.main__p {
+  color: white;
+  font-size: 21px;
+}
+
+@media (max-width: 575.98px) {
+  .main__h1 {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+  .main__p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .main__h1 {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+
+  .main__p {
+    font-size: 18px;
+  }
+
+}

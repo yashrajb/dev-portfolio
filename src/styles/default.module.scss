@@ -1,0 +1,9 @@
+@import url(https://fonts.googleapis.com/css2?family=Raleway&display=swap);
+
+$raleway_font:'Raleway';
+$purple_color:rgb(127, 7, 207);
+body {
+               background:$purple_color;
+               font-family:$raleway_font;
+               
+}
