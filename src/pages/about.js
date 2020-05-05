@@ -1,6 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import email from "../images/email.svg";
+import github from "../images/github.svg";
+import linkedin from "../images/linkedin.svg";
+import owner from "../images/owner.png";
 import aboutModule from "../styles/about.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
 const About = () => {
@@ -47,21 +51,21 @@ const About = () => {
             <p>
               <a href="">
                 <img
-                  src="/images/email.svg"
+                  src={email}
                   className={aboutModule.about__social}
                   alt={`${data.site.siteMetadata.author} email`}
                 />
               </a>
               <a href="">
                 <img
-                  src="/images/github.svg"
+                  src={github}
                   className={aboutModule.about__social}
                   alt={`${data.site.siteMetadata.author} github`}
                 />
               </a>
               <a href="">
                 <img
-                  src="/images/linkedin.svg"
+                  src={linkedin}
                   className={aboutModule.about__social}
                   alt={`${data.site.siteMetadata.author} linkedin`}
                 />
@@ -70,7 +74,7 @@ const About = () => {
           </div>
           <div className="col-md-6 col-xl-6 col-lg-6 d-none d-md-block">
             <img
-              src="/images/owner.png"
+              src={owner}
               alt={data.site.siteMetadata.author}
               className={`img-responsive ${aboutModule.about__image}`}
             />

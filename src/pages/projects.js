@@ -50,7 +50,7 @@ const Projects = props => {
               return (
                 <div className={`row ${projectModule.row}`}>
                   <div className="col-lg-4 col-xl-4 col-md-4">
-                    <img className={`img-responsive ${projectModule.projects__img}`} src={edge.node.frontmatter.featureImage.childImageSharp.fluid.src}/>
+                    <img className={`img-responsive ${projectModule.projects__img}`} src={edge.node.frontmatter.featureImage.childImageSharp.fluid.src} alt={edge.node.frontmatter.title}/>
                   </div>
                   <div className={`col-lg-8 col-xl-8 col-md-8 ${projectModule.projects__text}`}>
                     <h3 className={projectModule.h3}>
