@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import $ from 'jquery'; 
 import "bootstrap/dist/js/bootstrap.min.js";
 import './src/styles/default.module.scss';
 /**

@@ -17,7 +17,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
     patt.test(node.fileAbsolutePath)
   ) {
     var slug = path.basename(node.fileAbsolutePath, ".md");
-    console.log(slug);
+    slug = slug.split(" ").join("-");
     createNodeField({
       node,
       name: "slug",

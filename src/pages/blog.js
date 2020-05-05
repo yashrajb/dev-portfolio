@@ -43,7 +43,7 @@ const Blog = () => {
                       <h2>{item.node.frontmatter.title.toUpperCase()}</h2>
                       <p>{item.node.frontmatter.date}</p>
                       <Link
-                        to={`/blog/${item.node.fields.slug}`}
+                        to={`/blog/${Object.entries(item.node.fields).length?item.node.fields.slug:null}`}
                         className={`btn btn-default ${blogModule.blog_readmore}`}
                       >
                         Read More

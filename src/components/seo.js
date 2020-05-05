@@ -11,7 +11,6 @@ const SEO = props => {
           title
           description
         }
-        host
       }
     }
   `
