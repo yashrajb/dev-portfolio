@@ -1,0 +1,1 @@
+{"data":{"markdownRemark":{"frontmatter":{"title":"","date":"19-02-2019"},"fields":{"slug":"component"},"html":"<p>component is just reusable code and props are values which came from parent components</p>"}},"pageContext":{"isCreatedByStatefulCreatePages":false,"slug":"component"}}
