@@ -17,10 +17,13 @@ module.exports.onCreateNode = ({ node, actions }) => {
     patt.test(node.fileAbsolutePath)
   ) {
     var slug = path.basename(node.fileAbsolutePath, ".md");
+    console.log(`---------------- ${slug}--------------`)
     slug = slug.trim();
+    console.log(`-----------after trim ${slug}---------------`);
     if(slug.split(" ").length > 1){
       slug = slug.split(" ").join("-");
     }
+    console.log(`----------------after if condition ${slug}`);
     createNodeField({
       node,
       name: "slug",
