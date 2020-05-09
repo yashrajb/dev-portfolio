@@ -17,7 +17,9 @@ export const data = graphql`
       html
     }
   }
-`
+`;
+
+console.log(data);
 const blogTemplate = props => (
     <Layout header="white">
     <SEO title={`Blog - ${props.data.markdownRemark.frontmatter.title}`} description={`blog on ${props.data.markdownRemark.frontmatter.title}`}/>

@@ -34,7 +34,6 @@ module.exports.onCreateNode = ({ node, actions }) => {
 
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  var blogTemplatePath = path.resolve("./src/template/blog.js")
   var result = await graphql(`
     {
       allMarkdownRemark {
@@ -51,7 +50,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   `)
   //console.log(JSON.stringify(result, undefined, 6))
   result.data.allMarkdownRemark.edges.map(edge => {
-    var blogPath = path.resolve("./src/template/blog.js")
+    var blogPath = require.resolve("./src/template/blog.js")
     if (patt.test(edge.node.fileAbsolutePath)) {
       createPage({
         component: blogPath,
