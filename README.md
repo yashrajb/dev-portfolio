@@ -20,7 +20,7 @@ This portfolio is specifically for developers. most developers struggle for choo
   * create new folder with your project name
   * after making folder make create new file with your project name with extension ".md" (markdown)
   * add image in your project folder
-  * add attributes in "md" file
+  * add metatags in "md" file
     * title - title of the project
     * description - small description of the project
     * link - link if you deployed on internet. (optional)
