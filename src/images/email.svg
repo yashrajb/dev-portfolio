@@ -38,14 +38,14 @@
   <path
       id="path589"
       sodipodi:nodetypes="ccccc"
-      style="stroke-linejoin:round;fill-rule:evenodd;stroke:rgb(127, 7, 207);stroke-linecap:round;stroke-width:17.927;fill:rgb(127, 7, 207)"
+      style="stroke-linejoin:round;fill-rule:evenodd;stroke:white;stroke-linecap:round;stroke-width:17.927;fill:white"
       d="m69.819 119.6h303.75v171.31h-303.75l-0.001-171.31z"
       transform="matrix(.17049 0 0 .17824 -7.3882 -6.0097)"
   />
   <path
       id="path590"
       sodipodi:nodetypes="ccc"
-      style="stroke-linejoin:round;stroke:white;stroke-linecap:round;stroke-width:10.756;fill:transparent"
+      style="stroke-linejoin:round;stroke:#242629;stroke-linecap:round;stroke-width:10.756;fill:transparent"
       d="m69.819 119.6l150.12 90.41 153.63-90.41"
       transform="matrix(.17049 0 0 .17824 -7.3882 -6.0097)"
   />

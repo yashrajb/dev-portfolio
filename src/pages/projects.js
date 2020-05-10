@@ -56,7 +56,7 @@ const Projects = props => {
                     <h3 className={projectModule.h3}>
                       {edge.node.frontmatter.title}
                     </h3>
-                    <p> {edge.node.frontmatter.description}</p>{" "}
+                    <p className={projectModule.projects__subheadline}> {edge.node.frontmatter.description}</p>{" "}
                     <a
                       rel="noopener noreferrer"
                       className={`btn btn-default ${projectModule.projects__btn}`}

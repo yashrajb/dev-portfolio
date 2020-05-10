@@ -9,25 +9,19 @@
   margin: 150px 0px;
 }
 .main__h1 {
-  font-size:50px;
+  font-size:80px;
   color: white;
 }
 
-.main__btn-default {
+.main__btn-default,.main__btn-default:hover {
   border-radius: 0px;
-  border: 1px solid white;
-  background-color: transparent;
+  background-color: #7f5af0;
   color: white;
 }
 
-.main__btn-default:hover {
-  background-color: white;
-  border: 1px solid white;
-  color: $purple_color;
-}
 
 .main__p {
-  color: white;
+  color: #94a1b2;
   font-size: 21px;
 }
 

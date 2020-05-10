@@ -5,9 +5,8 @@ module.exports = {
     description: `Yashraj Basan is full stack developer`,
     author: `Yashraj Basan`,
     logo: "YB",
-    headLine: "Hello, I am web designer and developer",
-    afterHeadLine:
-      "passionate about building quality websites and web applications",
+    headLine: "Hello, I am developer",
+    subheadline: "passionate about building quality websites and web applications",
     github: "https://www.github.com/yashrajb",
     email: "basanyash627@gmail.com",
   },

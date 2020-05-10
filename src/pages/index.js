@@ -11,7 +11,7 @@ const IndexPage = () => {
         siteMetadata {
           headLine
           author
-          afterHeadLine
+          subheadline
         }
       }
     }
@@ -25,17 +25,15 @@ const IndexPage = () => {
           <h1 className={mainModule.main__h1}>
             {data.site.siteMetadata.headLine}
           </h1>
-          {data.site.siteMetadata.afterHeadLine ? (
+          {data.site.siteMetadata.subheadline ? (
             <p className={mainModule.main__p}>
-              {data.site.siteMetadata.afterHeadLine}
+              {data.site.siteMetadata.subheadline}
             </p>
           ) : null}
           <Link to="/projects" className={`btn ${mainModule.main__btnDefault}`}>
             Projects
           </Link>{" "}
-          <Link to="/about" className={`btn ${mainModule.main__btnDefault}`}>
-            About
-          </Link>
+          
           </div>
           
         </div>

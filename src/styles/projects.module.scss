@@ -4,7 +4,8 @@ margin:80px 0px;
 }
 
 .row {
-margin: 20px 0px;
+margin: 30px 0px;
+// background:#242629;
 }
 
 .projects__text {
@@ -16,7 +17,12 @@ margin: 20px 0px;
     height:auto;
 }
 
-.projects__btn {
-    background:white;
+.projects__btn,.projects__btn:hover {
+    background:#7f5af0;
     border-radius:0px;
+    color:white;
+}
+
+.projects__subheadline {
+    color:#94a1b2
 }
