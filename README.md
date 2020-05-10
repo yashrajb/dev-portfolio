@@ -32,3 +32,7 @@ This portfolio is specifically for developers. most developers struggle for choo
 ## How to add Resume
 
   * Go to "content" directory and add your resume. make sure your resume in pdf format.
+  
+## Coming soon
+  * Blog in markdown
+  * Experience in markdown
