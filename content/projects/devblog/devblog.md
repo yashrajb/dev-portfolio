@@ -5,6 +5,5 @@ description: "Devblog is fullstack javascript web application.this is a
   also used Google Oauth API and tinymce editor."
 link: "#"
 github: "#"
-download: ""
 featureImage: "./devblog.png"
 ---

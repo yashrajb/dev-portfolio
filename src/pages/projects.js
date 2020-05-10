@@ -18,7 +18,6 @@ const Projects = props => {
               description
               link
               github
-              download
               featureImage {
                 childImageSharp {
                   fluid(maxWidth:800){
