@@ -26,4 +26,9 @@ This portfolio is specifically for developers. most developers struggle for choo
     * link - link if you deployed on internet. (optional)
     * github - link if you deployed on github. (optional)
     * featureImage - image of your project
+    * example - 
+    ![example](https://raw.githubusercontent.com/yashrajb/dev-portfolio/master/repo/Capture.PNG)
   
+## How to add Resume
+
+  * Go to "content" directory and add your resume. make sure your resume in pdf format.
