@@ -1,6 +1,6 @@
 # Dev Portfolio
 
-This portfolio is specifically for developers. most developers struggle for choosing color schemes, icons, fonts. so, i thought why not build portfolio for developers.
+This portfolio is specifically for developers. most developers struggle for choosing color schemes, icons, fonts. so, i thought why not build portfolio for developers. check live preview [here](http://yashrajbasan.com/dev-portfolio)
 
 ## features
   * projects in markdown
