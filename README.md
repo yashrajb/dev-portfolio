@@ -42,7 +42,7 @@ This portfolio is specifically for developers. most developers struggle for choo
     * to - currently working or date
     * example - 
   * write content after the separator "---"
-    ![example](https://raw.githubusercontent.com/yashrajb/dev-portfolio/master/repo/Capture.PNG)
+    ![example](https://raw.githubusercontent.com/yashrajb/dev-portfolio/master/repo/Capture2.PNG)
 
 ## Edit about page
 
@@ -51,7 +51,7 @@ This portfolio is specifically for developers. most developers struggle for choo
   * you will find file name with "about.md"
   * in the "about" directory you can replace the photo
   * in "about" markdown file you will find url of social media and email and image refrence of owner. you can add new url of social         media here.  
-    ![example](https://raw.githubusercontent.com/yashrajb/dev-portfolio/master/repo/Capture.PNG)
+    ![example](https://raw.githubusercontent.com/yashrajb/dev-portfolio/master/repo/Capture3.PNG)
     
  NOTE - by default i added only two social media webites icons "gihub","linkedin" and there is one of email. you will find those images in "images" folder which is in "src". if you want other social media then you have to add it.
   
