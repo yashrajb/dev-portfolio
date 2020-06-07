@@ -10,7 +10,6 @@ const Header = ({ siteTitle, header }) => {
       site {
         siteMetadata {
           title
-          logo
         }
       }
       allFile(filter: { extension: { eq: "pdf" } }) {

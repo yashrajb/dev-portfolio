@@ -1,15 +1,30 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import email from "../images/email.svg";
-import github from "../images/github.svg";
-import linkedin from "../images/linkedin.svg";
-import owner from "../images/owner.png";
+import email from "../images/email.svg"
+import github from "../images/github.svg"
+import linkedin from "../images/linkedin.svg"
 import aboutModule from "../styles/about.module.scss"
 import { useStaticQuery, graphql } from "gatsby"
 const About = () => {
   const data = useStaticQuery(graphql`
     {
+      markdownRemark(fileAbsolutePath: { regex: "/about/" }) {
+        frontmatter {
+          image {
+            childImageSharp {
+              fluid(maxWidth:800){
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          github
+          linkedin
+          instagram
+          email
+        }
+        html
+      }
       site {
         siteMetadata {
           author
@@ -17,67 +32,51 @@ const About = () => {
       }
     }
   `)
+  console.log(data)
   return (
     <Layout header="white">
-    <SEO title={`About ${data.site.siteMetadata.author}`} description={`About ${data.site.siteMetadata.author}`}/>
+      <SEO
+        title={`About ${data.site.siteMetadata.author}`}
+        description={`About ${data.site.siteMetadata.author}`}
+      />
       <div className={`container ${aboutModule.about__main}`}>
         <div className="row">
           <div className="col-md-6 col-xl-6 col-lg-6">
             <h1 className={aboutModule.about__h1}>About me</h1>
-            <p className={aboutModule.about__text}>
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs. The passage is
-              attributed to an unknown typesetter in the 15th century who is
-              thought to have scrambled parts of Cicero's De Finibus Bonorum et
-              Malorum for use in a type specimen book. It usually begins with:
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs. The passage is
-              attributed to an unknown typesetter in the 15th century who is
-              thought to have scrambled parts of Cicero's De Finibus Bonorum et
-              Malorum for use in a type specimen book. It usually begins with:
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs. The passage is
-              attributed to an unknown typesetter in the 15th century who is
-              thought to have scrambled parts of Cicero's De Finibus Bonorum et
-              Malorum for use in a type specimen book. It usually begins with:
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs. The passage is
-              attributed to an unknown typesetter in the 15th century who is
-              thought to have scrambled parts of Cicero's De Finibus Bonorum et
-              Malorum for use in a type specimen book. It usually begins with:
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs. The passage is
-            </p>
+            <p className={aboutModule.about__text}  dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></p>
             <p>
-              <a href="">
+              {data.markdownRemark.frontmatter.email?<a href={`mailto:${data.markdownRemark.frontmatter.email}`}>
                 <img
                   src={email}
                   className={aboutModule.about__social}
                   alt={`${data.site.siteMetadata.author} email`}
                 />
-              </a>
-              <a href="">
+              </a>:null}
+              {
+                data.markdownRemark.frontmatter.github?<a target="__blank" href={`${data.markdownRemark.frontmatter.github}`}>
                 <img
                   src={github}
                   className={aboutModule.about__social}
                   alt={`${data.site.siteMetadata.author} github`}
                 />
-              </a>
-              <a href="">
+              </a>:null
+              }
+              {data.markdownRemark.frontmatter.linkedin?<a target="__blank" href={`${data.markdownRemark.frontmatter.linkedin}`}>
                 <img
                   src={linkedin}
                   className={aboutModule.about__social}
                   alt={`${data.site.siteMetadata.author} linkedin`}
                 />
-              </a>
+              </a>:null
+              }
             </p>
           </div>
           <div className="col-md-6 col-xl-6 col-lg-6 d-none d-md-block">
             <img
-              src={owner}
-              alt={data.site.siteMetadata.author}
+              src={data.markdownRemark.frontmatter.image.childImageSharp.fluid.src}
+              alt={data.markdownRemark.frontmatter.image.childImageSharp.fluid.src}
               className={`img-responsive ${aboutModule.about__image}`}
-            />
+            /> 
           </div>
         </div>
       </div>

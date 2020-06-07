@@ -4,11 +4,9 @@ module.exports = {
     title: `Yashraj Basan`,
     description: `Yashraj Basan is full stack developer`,
     author: `Yashraj Basan`,
-    logo: "YB",
     headLine: "Hello, I am developer",
     subheadline: "passionate about building quality websites and web applications",
-    github: "https://www.github.com/yashrajb",
-    email: "basanyash627@gmail.com",
+    email: "basanyash627@gmail.com"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

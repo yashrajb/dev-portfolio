@@ -32,7 +32,6 @@ const Projects = props => {
       site {
         siteMetadata {
           author
-          github
         }
       }
     }
