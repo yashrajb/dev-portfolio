@@ -32,7 +32,14 @@
     "prettier": "^1.17.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "developer portfolio",
+    "portfolio",
+    "gatsby developer portfolio",
+    "developer portfolio with blog",
+    "dev portfolio",
+    "gatsby dev portfolio",
+    "dev portfolio with blog"
   ],
   "license": "MIT",
   "scripts": {
