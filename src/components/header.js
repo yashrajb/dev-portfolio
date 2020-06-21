@@ -45,6 +45,11 @@ const Header = ({ siteTitle, header }) => {
           </Link>
           </li>
           <li className="nav-item">
+          <Link className={`nav-link ${headerModule.navlink__purple}`} to="/blog">
+              blog
+          </Link>
+          </li>
+          <li className="nav-item">
           <Link className={`nav-link ${headerModule.navlink__purple}`} to="/experience">
               experience
           </Link>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { graphql } from 'gatsby'
-
+import SEO from "../components/seo";
 import Layout from '../components/layout'
 import blogTemplate from "../styles/blog-template.module.scss";
 export const query = graphql`
@@ -33,6 +33,10 @@ const MarkdownPost = ({ slug, data }) => {
 
   return (
     <Layout page={title}>
+    <SEO
+          title={`blog - ${title}`}
+          description={`blog on ${title}`}
+    />
       <div className={`container ${blogTemplate.blog_template}`}>
       <header>
       <h1><strong>{title}</strong></h1>

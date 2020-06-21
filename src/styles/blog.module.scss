@@ -1,0 +1,29 @@
+
+.blog {
+margin:80px 0px;
+}
+
+.row {
+margin: 30px 0px;
+// background:#242629;
+}
+
+.blog__text {
+    color:white;
+}
+
+.blog__img{
+    width:100%;
+    height:auto;
+}
+
+.blog__readmore,.blog__readmore:hover {
+background:#7f5af0;
+border-radius:0px;
+color:white;
+padding:6px;
+}
+
+.blog__subheadline {
+    color:#94a1b2
+}
