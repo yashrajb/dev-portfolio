@@ -34,7 +34,8 @@ const IndexPage = () => {
             About
           </Link>{" "}
           </div>
-          
+          {/* <a href='https://www.freepik.com/free-photos-vectors/technology'>Technology vector created by stories - www.freepik.com</a>
+          <a href='https://www.freepik.com/free-photos-vectors/technology'>Technology vector created by stories - www.freepik.com</a> */}
         </div>
       </main>
     </Layout>
