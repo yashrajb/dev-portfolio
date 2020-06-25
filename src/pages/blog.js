@@ -8,15 +8,26 @@ const Projects = props => {
   const data = useStaticQuery(
     graphql`
       {
-        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___createdAt], order: DESC }
+          filter: { fileAbsolutePath: { regex: "/posts/" } }
+          ) {
           edges {
             node {
               frontmatter {
                 title
                 createdAt
+                tags
+                featureImage {
+                  childImageSharp {
+                    fluid(maxWidth:800){
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
-              fields{
-                             slug
+              fields {
+                slug
               }
               excerpt(pruneLength: 350)
             }
@@ -30,7 +41,7 @@ const Projects = props => {
       }
     `
   )
-  console.log(data)
+  console.log(props);
   return (
     <div>
       <Layout header="white">
@@ -41,6 +52,8 @@ const Projects = props => {
         <section className={`container-fluid ${blogModule.blog}`}>
           <div className="container">
             {data.allMarkdownRemark.edges.map(edge => {
+              let {featureImage,tags,title,createdAt} = edge.node.frontmatter;
+              console.log(tags);
               return (
                 <div className={`row ${blogModule.row}`}>
                   <div
@@ -49,20 +62,22 @@ const Projects = props => {
                     }`}
                   >
                     <h3 className={blogModule.h3}>
-                      {edge.node.frontmatter.title}
+                      {title}
                     </h3>
-                    <p className={blogModule.blog__subheadline}>
-                      {" "}
-                      {edge.node.excerpt}
-                    </p>{" "}
-                    <Link
-                      className={`btn btn-default ${
-                        blogModule.blog__readmore
-                      }`}
+                    <h5 className={blogModule.createdAt}>
+                      {createdAt} &bull;
+                      {tags.map((tag) => {
+                      return (<Link to={`/blog?tag=${tag}`} className={blogModule.blog__tag}> {tag}</Link>)
+                      })}
+                    </h5>
+                    
+                    {featureImage?<img src={featureImage.childImageSharp.fluid.src} className="img-responsive" alt={`feature image of ${edge.node.frontmatter.title}`}/>:null}
+                    <p><Link
+                      className={`btn btn-default ${blogModule.blog__readmore}`}
                       to={`/blog/${edge.node.fields.slug}`}
                     >
                       Read More
-                    </Link>{" "}
+                    </Link>{" "}</p>
                   </div>
                 </div>
               )

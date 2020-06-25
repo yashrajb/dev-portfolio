@@ -1,4 +1,23 @@
-.blog_template{
-               color:white !important;
-               margin-top:30px;
+.blogTemplate {
+  color: white !important;
+  margin-top: 30px;
+}
+
+.blogTemplate__blog {
+  padding: 20px 0px;
+}
+
+.blogTemplate__img {
+  box-shadow: 2px 2px 3px grey;
+  margin: 10px 0px;
+}
+
+.blogTemplate__h5 {
+  font-size: 14px;
+  color: #94a1b2;
+}
+
+.blog__tag,.blog__tag:hover {
+  margin-right: 4px;
+  color: #94a1b2;
 }

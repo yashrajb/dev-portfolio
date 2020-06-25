@@ -42,7 +42,6 @@ exports.createPages = async ({ graphql, actions }) => {
   if (markdown.errors) throw markdown.errors
   markdown.data.allMarkdownRemark.edges.forEach(({node}) => {
       let {fileAbsolutePath} = node;
-      console.log(fileAbsolutePath);
       if(fileAbsolutePath.includes("posts")){
         let {slug} = node.fields;
         createPage({
@@ -55,27 +54,3 @@ exports.createPages = async ({ graphql, actions }) => {
       }
   })
 }
-//   const contentfulPost = path.resolve("src/templates/blog-post-contentful.js")
-//   const contentful = await graphql(`
-//     {
-//       allContentfulBlogPost(limit: 1000) {
-//         edges {
-//           node {
-//             slug
-//           }
-//         }
-//       }
-//     }
-//   `)
-//   if (contentful.errors) throw contentful.errors
-//   contentful.data.allContentfulBlogPost.edges.forEach(edge => {
-//     const { slug } = edge.node
-//     createPage({
-//       path: `/blog/${slug}`,
-//       component: contentfulPost,
-//       context: {
-//         slug,
-//       },
-//     })
-//   })
-// }
