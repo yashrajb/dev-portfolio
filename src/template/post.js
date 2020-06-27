@@ -14,7 +14,6 @@ export const query = graphql`
       frontmatter {
         title
         createdAt
-        tags
         featureImage {
           childImageSharp {
             fluid(maxWidth:800){
@@ -41,10 +40,7 @@ const MarkdownPost = ({ slug, data }) => {
       <div className={`container ${blogTemplate.blogTemplate}`}>
       <header>
       <h1><strong>{title}</strong></h1>
-      <h5 className={`${blogTemplate.blogTemplate__h5}`}>{createdAt} &bull;
-                      {tags.map((tag) => {
-                      return (<Link to={`/blog?tag=${tag}`} className={blogTemplate.blog__tag}> {tag}</Link>)
-                      })}</h5>
+      <h5 className={`${blogTemplate.blogTemplate__h5}`}>{createdAt}</h5>
       </header>
       <div className="text-center">
       {featureImage?<img src={`${featureImage.childImageSharp.fluid.src}`} className={`img-responsive ${blogTemplate.blogTemplate__img}`} />:null}

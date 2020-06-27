@@ -3,21 +3,22 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import blogModule from "../styles/blog.module.scss"
 import { useStaticQuery, graphql, Link } from "gatsby"
-
+import {getParams} from "../util";
 const Projects = props => {
   const data = useStaticQuery(
     graphql`
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___createdAt], order: DESC }
-          filter: { fileAbsolutePath: { regex: "/posts/" } }
+          filter: {
+            fileAbsolutePath: { regex: "/posts/" } 
+          }
           ) {
           edges {
             node {
               frontmatter {
                 title
                 createdAt
-                tags
                 featureImage {
                   childImageSharp {
                     fluid(maxWidth:800){
@@ -40,8 +41,8 @@ const Projects = props => {
         }
       }
     `
-  )
-  console.log(props);
+  );
+  console.log(data);
   return (
     <div>
       <Layout header="white">
@@ -52,8 +53,7 @@ const Projects = props => {
         <section className={`container-fluid ${blogModule.blog}`}>
           <div className="container">
             {data.allMarkdownRemark.edges.map(edge => {
-              let {featureImage,tags,title,createdAt} = edge.node.frontmatter;
-              console.log(tags);
+              let {title,createdAt} = edge.node.frontmatter;
               return (
                 <div className={`row ${blogModule.row}`}>
                   <div
@@ -65,13 +65,9 @@ const Projects = props => {
                       {title}
                     </h3>
                     <h5 className={blogModule.createdAt}>
-                      {createdAt} &bull;
-                      {tags.map((tag) => {
-                      return (<Link to={`/blog?tag=${tag}`} className={blogModule.blog__tag}> {tag}</Link>)
-                      })}
+                      {createdAt}
                     </h5>
-                    
-                    {featureImage?<img src={featureImage.childImageSharp.fluid.src} className="img-responsive" alt={`feature image of ${edge.node.frontmatter.title}`}/>:null}
+                  <p className={blogModule.blog__subheadline}>{edge.node.excerpt}</p>
                     <p><Link
                       className={`btn btn-default ${blogModule.blog__readmore}`}
                       to={`/blog/${edge.node.fields.slug}`}

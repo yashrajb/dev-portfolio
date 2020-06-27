@@ -1,5 +1,5 @@
 ---
-title: Hello World - from mdx!
+title: developer world
 createdAt: 06-21-2020
 featureImage: "./Capture.png"
 ---
