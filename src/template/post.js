@@ -27,6 +27,7 @@ export const query = graphql`
   }
 `
 const MarkdownPost = (props) => {
+  console.log(process.env.NODE_ENV);
   let { slug, data } = props;
   console.log(data);
   const { title, createdAt, featureImage } = data.markdownRemark.frontmatter
