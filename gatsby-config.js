@@ -1,4 +1,6 @@
-module.exports = {
+console.log(process.env.NODE_ENV);
+
+let obj = {
   pathPrefix: "/dev-portfolio",
   siteMetadata: {
     title: `Yashraj Basan`,
@@ -7,7 +9,6 @@ module.exports = {
     headLine: "Hello, I am developer",
     subheadline: "passionate about building quality websites and web applications",
     email: "basanyash627@gmail.com",
-    pathPrefix:"/dev-portfolio"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -41,3 +42,7 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+if(process.env.NODE_ENV==="production"){
+ obj.pathPrefix = "/dev-portfolio" 
+}
+module.exports = obj;
