@@ -26,11 +26,12 @@ export const query = graphql`
     }
   }
 `
-const MarkdownPost = ({ slug, data }) => {
+const MarkdownPost = (props) => {
+  let { slug, data } = props;
   console.log(data);
   const { title, createdAt, featureImage, tags } = data.markdownRemark.frontmatter
   const { html } = data.markdownRemark
-
+  console.log(props);
   return (
     <Layout page={title}>
     <SEO
