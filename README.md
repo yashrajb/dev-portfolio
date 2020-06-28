@@ -3,6 +3,7 @@
 This portfolio is specifically for developers. most developers struggle for choosing color schemes, icons, fonts. so, i thought why not build portfolio for developers. check live preview [here](http://yashrajbasan.com/dev-portfolio)
 
 ## features
+  * blog
   * content on markdown
   * responsive design
   * modern color scheme
@@ -10,7 +11,7 @@ This portfolio is specifically for developers. most developers struggle for choo
   * SEO
   * optimized 
   * resume download function
-  * no need of configuration to download resume 
+  * no need of configuration to download resume
 
 ## How to add projects
 
@@ -50,10 +51,17 @@ This portfolio is specifically for developers. most developers struggle for choo
   * go to "about" directory
   * you will find file name with "about.md"
   * in the "about" directory you can replace the photo
-  * in "about" markdown file you will find url of social media and email and image refrence of owner. you can add new url of social         media here.  
+  * in "about" markdown file you will find url of social media and email and image refrence of owner. you can add new url of social media.
     ![example](https://raw.githubusercontent.com/yashrajb/dev-portfolio/master/repo/Capture3.PNG)
     
  NOTE - by default i added only two social media webites icons "gihub","linkedin" and there is one of email. you will find those images in "images" folder which is in "src". if you want other social media then you have to add it.
   
-## Coming soon
-  * Blog in markdown
+## Write new blog
+   * make new folder in "content/posts" directory with your blog title. separate blog title with "-"
+   * make new markdown file with your blog title.
+   * add metatags in md file
+      * title - title of blog - required
+      * createdAt - date - required
+      * featureImage - feature image of your blog - optional
+   * write content after the separator "---"
+   ![example](https://raw.githubusercontent.com/yashrajb/dev-portfolio/master/repo/capture4.PNG)
