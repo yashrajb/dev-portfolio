@@ -29,7 +29,7 @@ export const query = graphql`
 const MarkdownPost = (props) => {
   let { slug, data } = props;
   console.log(data);
-  const { title, createdAt, featureImage, tags } = data.markdownRemark.frontmatter
+  const { title, createdAt, featureImage } = data.markdownRemark.frontmatter
   const { html } = data.markdownRemark
   console.log(props);
   return (

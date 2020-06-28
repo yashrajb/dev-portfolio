@@ -6,7 +6,8 @@ module.exports = {
     author: `Yashraj Basan`,
     headLine: "Hello, I am developer",
     subheadline: "passionate about building quality websites and web applications",
-    email: "basanyash627@gmail.com"
+    email: "basanyash627@gmail.com",
+    pathPrefix:"/dev-portfolio"
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
