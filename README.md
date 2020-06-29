@@ -12,6 +12,10 @@ This portfolio is specifically for developers. most developers struggle for choo
   * optimized 
   * resume download function
   * no need of configuration to download resume
+  
+## After cloning the repo
+   
+   * remove the "pathPrefix" from gatsby-config.js. it will create problem in local environment
 
 ## How to add projects
 
