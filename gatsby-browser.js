@@ -1,5 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "bootstrap/dist/js/bootstrap.min.js";
+import 'materialize-css/dist/css/materialize.min.css';
 import './src/styles/default.module.scss';
 /**
  * Implement Gatsby's Browser APIs in this file.

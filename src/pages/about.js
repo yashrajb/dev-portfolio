@@ -32,7 +32,7 @@ const About = () => {
       }
     }
   `)
-  console.log(data)
+ 
   return (
     <Layout header="white">
       <SEO
@@ -40,8 +40,11 @@ const About = () => {
         description={`About ${data.site.siteMetadata.author}`}
       />
       <div className={`container ${aboutModule.about__main}`}>
+      <div className="row">
+        <div className="col s12 m1 l2"></div>
+        <div class="col s12 m9 l12">
         <div className="row">
-          <div className="col-md-6 col-xl-6 col-lg-6">
+          <div className="col m6 l6">
             <h1 className={aboutModule.about__h1}>About me</h1>
             <p className={aboutModule.about__text}  dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></p>
             <p>
@@ -71,13 +74,16 @@ const About = () => {
               }
             </p>
           </div>
-          <div className="col-md-6 col-xl-6 col-lg-6 d-none d-md-block">
+          <div className="col m6 l6 d-none d-md-block">
             <img
               src={data.markdownRemark.frontmatter.image.childImageSharp.fluid.src}
               alt={data.markdownRemark.frontmatter.image.childImageSharp.fluid.src}
               className={`img-responsive ${aboutModule.about__image}`}
             /> 
           </div>
+        </div>
+        </div>
+        <div className="col s12 m2 l2"></div>
         </div>
       </div>
     </Layout>

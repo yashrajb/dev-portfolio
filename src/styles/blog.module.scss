@@ -18,6 +18,11 @@ margin: 30px 0px;
     height:auto;
 }
 
+.h3 {
+    color:white;
+    font-size: 1.75rem
+}
+
 .blog__readmore,.blog__readmore:hover {
 background:#7f5af0;
 border-radius:0px;
@@ -38,4 +43,8 @@ padding:3px 6px;
 .blog__tag,.blog__tag:hover {
 margin-right:4px;
 color:#94a1b2
+}
+
+.container {
+    margin-top:60px;
 }

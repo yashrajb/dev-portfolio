@@ -41,10 +41,10 @@ const MarkdownPost = (props) => {
     />
       <div className={`container ${blogTemplate.blogTemplate}`}>
       <header>
-      <h1><strong>{title}</strong></h1>
+      <h1 class={blogTemplate.blogTemplate__h1}><strong>{title}</strong></h1>
       <h5 className={`${blogTemplate.blogTemplate__h5}`}>{createdAt}</h5>
       </header>
-      <div className="text-center">
+      <div className="center-align">
       {featureImage?<img src={`${featureImage.childImageSharp.fluid.src}`} className={`img-responsive ${blogTemplate.blogTemplate__img}`} />:null}
       </div>
       <div className={`${blogTemplate.blogTemplate__blog}`} dangerouslySetInnerHTML={{ __html: html }}></div>

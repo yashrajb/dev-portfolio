@@ -50,14 +50,14 @@ const Projects = props => {
           title={`${data.site.siteMetadata.author} blog`}
           description={`projects of ${data.site.siteMetadata.author}`}
         />
-        <section className={`container-fluid ${blogModule.blog}`}>
-          <div className="container">
+          <div className={blogModule.container}> 
             {data.allMarkdownRemark.edges.map(edge => {
               let {title,createdAt} = edge.node.frontmatter;
               return (
                 <div className={`row ${blogModule.row}`}>
+                  <div class="col s12 m1 l2"></div>
                   <div
-                    className={`col-lg-12 col-xl-12 col-md-12 ${
+                    className={`col s12 m9 l8 ${
                       blogModule.blog__text
                     }`}
                   >
@@ -75,11 +75,12 @@ const Projects = props => {
                       Read More
                     </Link>{" "}</p>
                   </div>
+                  <div class="col s12 m2 l2"></div>
                 </div>
               )
             })}
           </div>
-        </section>
+        
       </Layout>
     </div>
   )

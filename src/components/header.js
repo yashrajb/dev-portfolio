@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import headerModule from "../styles/header.module.scss"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 const Header = ({ siteTitle, header }) => {
   
 
@@ -21,10 +21,10 @@ const Header = ({ siteTitle, header }) => {
       }
     }
   `)
-
+   console.log(data);
   return (
     <nav className={`navbar navbar-expand-md ${headerModule.navbar__purple}`}>
-      <Link className={`navbar-brand ${headerModule.navbarBrand__white}`} to="/">
+      {/* <Link className={`navbar-brand ${headerModule.navbarBrand__white}`} to="/">
           {data.site.siteMetadata.title}
       </Link>
 
@@ -60,7 +60,41 @@ const Header = ({ siteTitle, header }) => {
           </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
+    <div class="nav-wrapper">
+      
+      <Link className={`${headerModule.navbarBrand__white}`} to="/">
+        {data.site.siteMetadata.title}
+      </Link>
+    
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <Link className={`${headerModule.navlink__purple}`} to="/projects">
+          projects
+        </Link>
+      </li>
+        <li>
+        <Link className={`${headerModule.navlink__purple}`} to="/blog">
+              blog
+          </Link>
+        </li>
+        <li>
+        <Link className={`${headerModule.navlink__purple}`} to="/experience">
+              experience
+          </Link>
+        </li>
+        <li>
+        <Link className={`${headerModule.navlink__purple}`} to="/about">
+              about
+          </Link>
+        </li>
+        <li>
+        {<a download href={`/yashraj-basan-full-stack-developer-PIET.pdf`} class={`btn ${headerModule.download___resume}`}>
+            Download Resume
+          </a>}
+        </li>
+      </ul>
+    </div>
     </nav>
   )
 }

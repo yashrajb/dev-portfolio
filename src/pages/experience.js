@@ -54,6 +54,7 @@ const Experience = () => {
                       }`}
                     />
                     <h3
+                    className={`${experienceModule.h3}`}
                       dangerouslySetInnerHTML={{
                         __html: element.node.frontmatter.name,
                       }}

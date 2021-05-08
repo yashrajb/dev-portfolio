@@ -1,13 +1,15 @@
 
 @import "./default.module.scss";
 
-.main {
-  padding: 100px 0px;
-  border: 0px;
-}
+
 .text {
   margin: 130px 0px;
 }
+
+.main {
+  margin-top:160px;
+}
+
 .main__h1 {
   font-size:80px;
   color: white;
@@ -24,19 +26,21 @@
 .main__p {
   color: #94a1b2;
   font-size: 21px;
+  margin-top:-30px;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 600px) {
   .main__h1 {
     font-size: 30px;
     margin-top: 0px;
   }
   .main__p {
     font-size: 18px;
+    margin-top:2px;
   }
 }
 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 992px ) and (max-width: 992px) {
   .main__h1 {
     font-size: 30px;
     margin-top: 0px;
