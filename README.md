@@ -21,8 +21,7 @@ This portfolio is specifically for developers. most developers struggle for choo
 
 ## How to add projects
 
-  * go to "content" directory
-  * go to "projects" directory
+  * go to `content/projects` directory
   * create new folder with your project name
   * after making folder make create new file with your project name with extension ".md" (markdown)
   * add image in your project folder
@@ -35,13 +34,9 @@ This portfolio is specifically for developers. most developers struggle for choo
     * example - 
     ![example](https://raw.githubusercontent.com/yashrajb/dev-portfolio/master/repo/Capture.PNG)
   
-## How to add Resume
-
-  * Go to "content" directory and add your resume. make sure your resume in pdf format.
 ## How to add experience
 
-  * go to "content" directory
-  * go to "experience" directory
+  * go to `content/experience` directory
   * create new markdown file
   * add metatags in "md" file
     * name - name of the company
@@ -53,8 +48,7 @@ This portfolio is specifically for developers. most developers struggle for choo
 
 ## Edit about page
 
-  * go to "content" directory
-  * go to "about" directory
+  * go to `content/about` directory
   * you will find file name with "about.md"
   * in the "about" directory you can replace the photo
   * in "about" markdown file you will find url of social media and email and image refrence of owner. you can add new url of social media.
@@ -71,3 +65,9 @@ This portfolio is specifically for developers. most developers struggle for choo
       * featureImage - feature image of your blog - optional
    * write content after the separator "---"
    ![example](https://raw.githubusercontent.com/yashrajb/dev-portfolio/master/repo/capture4.PNG)
+
+## Adding your resume
+   * go to `/static` folder and upload your resume file
+   * now go to `src/components/header.js`and find this keyword `Download Resume`
+   * just change it's URL that's all
+
