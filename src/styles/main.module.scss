@@ -2,14 +2,15 @@
 @import "./default.module.scss";
 
 .main {
-  padding: 100px 0px;
+  padding: 350px 0px 350px 0px;
   border: 0px;
+  // text-align: center;
 }
-.text {
-  margin: 130px 0px;
-}
+// .text {
+//   margin: 130px 0px;
+// }
 .main__h1 {
-  font-size:80px;
+  font-size:70px;
   color: white;
 }
 
@@ -26,24 +27,4 @@
   font-size: 21px;
 }
 
-@media (max-width: 575.98px) {
-  .main__h1 {
-    font-size: 30px;
-    margin-top: 0px;
-  }
-  .main__p {
-    font-size: 18px;
-  }
-}
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .main__h1 {
-    font-size: 30px;
-    margin-top: 0px;
-  }
-
-  .main__p {
-    font-size: 18px;
-  }
-
-}

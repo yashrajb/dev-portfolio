@@ -1,7 +1,7 @@
 @import "./default.module.scss";
 
 .blog {
-margin:80px 0px;
+margin:100px 0px;
 }
 
 .row {
@@ -38,4 +38,11 @@ padding:3px 6px;
 .blog__tag,.blog__tag:hover {
 margin-right:4px;
 color:#94a1b2
+}
+
+.blog__searchInput,.blog__searchInput:hover,.blog__searchInput:focus {
+    background:$purple_color;
+    border-color:#94a1b2;
+    color:white;
+    border-radius:0px;
 }

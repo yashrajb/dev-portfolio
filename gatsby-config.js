@@ -6,8 +6,8 @@ let obj = {
     title: `Yashraj Basan`,
     description: `Yashraj Basan is full stack developer`,
     author: `Yashraj Basan`,
-    headLine: "Hello, I am developer",
-    subheadline: "passionate about building quality websites and web applications",
+    headLine: "Hello, i am full stack developer",
+    subheadline: "i am yashraj passionate full stack developer with 2 years of experience in javascript development. worked with traditional technologies and as well as modern technologies.",
     email: "basanyash627@gmail.com",
   },
   plugins: [

@@ -23,7 +23,7 @@ const Header = ({ siteTitle, header }) => {
   `)
 
   return (
-    <nav className={`navbar navbar-expand-md ${headerModule.navbar__purple}`}>
+    <nav className={`navbar navbar-expand-md ${headerModule.navbar__purple} fixed-top`}>
       <Link className={`navbar-brand ${headerModule.navbarBrand__white}`} to="/">
           {data.site.siteMetadata.title}
       </Link>

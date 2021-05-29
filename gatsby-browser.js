@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap.min.js";
-import './src/styles/default.module.scss';
+import './src/styles/default.module.scss' ;
 /**
  * Implement Gatsby's Browser APIs in this file.
  *
