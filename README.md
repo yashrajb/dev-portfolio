@@ -1,5 +1,5 @@
 # Dev Portfolio
-
+              
 This portfolio is specifically for developers. most developers struggle for choosing color schemes, icons, fonts. so, i thought why not build portfolio for developers.check live preview [here](https://yashrajb.github.io/dev-portfolio)
 
 ![dev portfolio](https://github.com/yashrajb/dev-portfolio/blob/master/repo/Screenshot%20(24).png)
