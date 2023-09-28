@@ -11,7 +11,9 @@ const path = require("path")
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
   const { internal, fileAbsolutePath } = node
- let isItPost = fileAbsolutePath?fileAbsolutePath.includes("posts"):null;
+  let isItPost = fileAbsolutePath
+    ? fileAbsolutePath.includes("case-study")
+    : null
   if (internal.type === "MarkdownRemark" && isItPost) {
     const slug = path.basename(fileAbsolutePath, ".md")
     createNodeField({
@@ -24,7 +26,7 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const post = path.resolve("src/template/post.js")
+  const caseStudy = path.resolve("src/template/CaseStudy/index.js")
   const markdown = await graphql(`
     {
       allMarkdownRemark {
@@ -32,7 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
           node {
             fields {
               slug
-            },
+            }
             fileAbsolutePath
           }
         }
@@ -40,17 +42,17 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
   if (markdown.errors) throw markdown.errors
-  markdown.data.allMarkdownRemark.edges.forEach(({node}) => {
-      let {fileAbsolutePath} = node;
-      if(fileAbsolutePath.includes("posts")){
-        let {slug} = node.fields;
-        createPage({
-                path: `/blog/${slug}`,
-                component: post,
-                context: {
-                  slug,
-                },
-        })
-      }
+  markdown.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    let { fileAbsolutePath } = node
+    if (fileAbsolutePath.includes("case-study")) {
+      let { slug } = node.fields
+      createPage({
+        path: `/case-study/${slug}`,
+        component: caseStudy,
+        context: {
+          slug,
+        },
+      })
+    }
   })
 }

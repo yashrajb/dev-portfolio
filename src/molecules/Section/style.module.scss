@@ -1,0 +1,12 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+.container {
+  margin-top: 50px;
+  padding: 50px 0px;
+  color: colors.$primaryColor;
+
+  @media screen and (max-width: sizes.$md) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

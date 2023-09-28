@@ -1,0 +1,22 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+.caseStudy {
+  .title,
+  .subheadline {
+    color: colors.$primaryColor;
+    margin-top: 15px;
+  }
+  .subheadline {
+    color: colors.$paraColor;
+  }
+
+  @media screen and (max-width: sizes.$md) {
+    .title {
+      font-size: 25px;
+    }
+
+    .subheadline {
+      font-size: 16px;
+    }
+  }
+}

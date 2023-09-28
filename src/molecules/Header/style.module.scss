@@ -1,0 +1,87 @@
+@use "@app/styles/variables/sizes.module";
+@use "@app/styles/variables/colors.module";
+.container {
+  padding: 30px 20px;
+  background-color: colors.$primaryBackground;
+  animation: navigation 1s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @keyframes navigation {
+    from {
+      margin-top: -100px;
+    }
+
+    to {
+      margin-top: 0px;
+    }
+  }
+
+  .logo {
+    color: colors.$primaryColor !important;
+    font-size: 27px;
+    text-decoration: none;
+  }
+
+  .links {
+    @media screen and (max-width: sizes.$sm) {
+      display: none;
+    }
+  }
+  .link {
+    display: block;
+    line-height: 1;
+    padding: 0px;
+    border-radius: 0px;
+    text-decoration: none;
+    cursor: pointer;
+    color: colors.$primaryColor;
+    font-weight: 500;
+    font-size: 20px;
+    margin-right: 10px;
+    text-transform: capitalize;
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: sizes.$sm) {
+      border-radius: 0;
+    }
+  }
+
+  .burger {
+    color: colors.$primaryColor;
+    @media screen and (min-width: sizes.$sm) {
+      display: none;
+    }
+  }
+
+  .dropDown {
+    background: colors.$secondaryBackground;
+    .item {
+      color: colors.$primaryColor !important;
+      background-color: colors.$secondaryBackground !important;
+      font-size: 16px;
+      text-transform: capitalize;
+      &:hover {
+        background-color: colors.$secondaryBackground !important;
+      }
+      .link {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .socialLinks {
+    display: inline-block;
+    svg {
+      color: colors.$primaryColor;
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: sizes.$md) {
+      display: none;
+    }
+  }
+}

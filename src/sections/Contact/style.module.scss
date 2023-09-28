@@ -1,0 +1,32 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+.contact {
+  padding: 0px 0px;
+
+  .links {
+    list-style: none;
+    padding: 0px;
+
+    .link {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      text-decoration: none !important;
+      padding: 20px;
+      background-color: colors.$secondaryBackground;
+      .title {
+        margin-left: 10px;
+      }
+      svg,
+      .title {
+        color: colors.$paraColor;
+      }
+    }
+  }
+
+  .subheadline {
+    color: colors.$primaryColor;
+    margin: 10px 0px;
+    color: colors.$paraColor;
+  }
+}

@@ -1,0 +1,19 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+
+.notFoundPage {
+  text-align: center;
+  margin: 100px 0px;
+  img {
+    width: 600px;
+    height: 600px;
+
+    @media screen and (max-width: sizes.$md) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .link {
+    color: colors.$paraColor;
+  }
+}

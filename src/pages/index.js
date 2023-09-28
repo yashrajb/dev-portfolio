@@ -1,48 +1,32 @@
 import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import mainModule from "../styles/main.module.scss"
-import { useStaticQuery, graphql } from "gatsby";
+import Layout from "@app/molecules/Layout"
+import { Suspense } from "react"
+import Hero from "@app/sections/Hero"
+import Experience from "@app/sections/Experience"
+import CaseStudy from "@app/sections/Case Study"
+import Projects from "@app/sections/Projects"
+import Blog from "@app/sections/Blog"
+import About from "@app/sections/About"
+import Contact from "@app/sections/Contact"
+import { useStore } from "@app/store"
+import SEO from "../atoms/SEO"
+
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          headLine
-          author
-          subheadline
-        }
-      }
-    }
-  `)
   return (
-    <Layout comp="header">
-      <SEO title={`${data.site.siteMetadata.author} Homepage`} description={`Homepage of ${data.site.siteMetadata.author}`}/>
-      <main className={mainModule.main}>
-        <div className="container">
-          <div className={mainModule.text}>
-          <h1 className={mainModule.main__h1}>
-            {data.site.siteMetadata.headLine}
-          </h1>
-          {data.site.siteMetadata.subheadline ? (
-            <p className={mainModule.main__p}>
-              {data.site.siteMetadata.subheadline}
-            </p>
-          ) : null}
-           <Link to="/projects" className={`btn ${mainModule.main__btnDefault}`}>
-            Projects
-          </Link>
-          <Link to="/about" className={`btn ${mainModule.main__btnDefault}`}>
-            About
-          </Link>{" "}
-          </div>
-          {/* <a href='https://www.freepik.com/free-photos-vectors/technology'>Technology vector created by stories - www.freepik.com</a>
-          <a href='https://www.freepik.com/free-photos-vectors/technology'>Technology vector created by stories - www.freepik.com</a> */}
-        </div>
-      </main>
+    <Layout>
+      <Hero id="hero" />
+      <Experience id="experience" />
+      <CaseStudy id="caseStudy" />
+      <Projects id="projects" />
+      <Blog id="blog" />
+      <About id="about" />
+      <Contact id="contact" />
     </Layout>
   )
 }
 
 export default IndexPage
+
+export function Head() {
+  return <SEO />
+}

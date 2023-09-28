@@ -1,0 +1,33 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+.projects {
+  background-color: colors.$secondaryBackground;
+  padding: 70px 0px;
+
+  .desc {
+    color: colors.$paraColor;
+  }
+
+  .link {
+    margin-right: 20px;
+  }
+
+  .badge {
+    text-transform: capitalize;
+    font-style: italic;
+    margin: 10px 0px;
+  }
+  .seeAll {
+    text-align: center;
+  }
+
+  @media screen and (max-width: sizes.$md) {
+    .title {
+      font-size: 25px;
+    }
+    .desc,
+    .badge {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+.container {
+  margin-top: 130px;
+  margin-bottom: 90px;
+
+  p {
+    color: colors.$paraColor;
+    font-size: 20px;
+    @media screen and (min-width: sizes.$lg) {
+      font-size: 24px;
+    }
+  }
+
+  strong {
+    color: colors.$primaryColor;
+  }
+
+  .dateAndWebsite {
+    color: colors.$paraColor;
+    margin: 15px 0px;
+    @media screen and (max-width: sizes.$md) {
+      font-size: 16px;
+    }
+  }
+
+  .imagesGrid {
+    img {
+      margin: 10px 0px;
+    }
+  }
+
+  a,
+  .subheadline {
+    color: colors.$paraColor;
+  }
+}

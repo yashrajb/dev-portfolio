@@ -1,18 +1,31 @@
-console.log(process.env.NODE_ENV);
+const path = require("path")
 
-let obj = {
+let config = {
   pathPrefix: "/dev-portfolio",
   siteMetadata: {
     title: `Yashraj Basan`,
     description: `Yashraj Basan is full stack developer`,
     author: `Yashraj Basan`,
-    headLine: "Hello, i am full stack developer",
-    subheadline: "i am yashraj passionate full stack developer with 2 years of experience in javascript development. worked with traditional technologies and as well as modern technologies.",
     email: "basanyash627@gmail.com",
+    github: "http://github.com/yashrajb",
+    instagram: "http://instagram.com/yashraj.dev",
+    linkedin: "https://www.linkedin.com/in/yashraj-basan-11b915157/",
+    twitter: "https://twitter.com/yashrajbasan2",
+    mediumBlogUsername: "@basanyash627",
+    phoneNumber: "+919408087652",
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          src: path.resolve(__dirname, "./src/*"),
+          "@app": path.resolve(__dirname, "src"),
+        },
+        extensions: [".js", ".scss"],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -20,9 +33,8 @@ let obj = {
         path: `${__dirname}/content/`,
       },
     },
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-manifest`,
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -31,7 +43,7 @@ let obj = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 750
+              maxWidth: 750,
             },
           },
         ],
@@ -39,10 +51,9 @@ let obj = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
-if(process.env.NODE_ENV==="production"){
- obj.pathPrefix = "/dev-portfolio" 
+if (process.env.NODE_ENV === "production") {
+  config.pathPrefix = "/dev-portfolio"
 }
-module.exports = obj;
+module.exports = config

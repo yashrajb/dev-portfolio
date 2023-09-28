@@ -1,0 +1,31 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+.about {
+  background-color: colors.$secondaryBackground;
+  .grid {
+    margin: 20px 0px;
+  }
+
+  .duckettBooks {
+    color: colors.$primaryColor;
+    text-decoration: none;
+  }
+  .title {
+    font-size: 24px;
+    color: colors.$paraColor;
+    margin-left: 5px;
+    &:nth-of-type(2) {
+      margin-top: 0px;
+    }
+
+    @media screen and (max-width: sizes.$md) {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  }
+
+  .subheadline {
+    color: colors.$primaryColor;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,21 @@
+@use "./variables/colors.module" as colors;
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.woff") format("woff2");
+  font-display: swap;
+}
+html {
+  height: 100%;
+  overflow: auto;
+}
+body {
+  height: 100%;
+}
+body {
+  background: colors.$primaryBackground;
+  font-family: "Roboto";
+  color: colors.$primaryColor !important;
+  padding: 0px;
+  margin: 0px;
+}

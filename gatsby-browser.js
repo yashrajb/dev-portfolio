@@ -1,10 +1,8 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "bootstrap/dist/js/bootstrap.min.js";
-import './src/styles/default.module.scss' ;
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React from "react"
+import Context from "./src/molecules/Context"
 
-// You can delete this file if you're not using it
+import "./src/styles/default.scss"
+
+export const wrapPageElement = ({ element, props }) => {
+  return <Context>{element}</Context>
+}

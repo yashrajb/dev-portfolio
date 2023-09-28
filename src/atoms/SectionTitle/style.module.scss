@@ -1,0 +1,10 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+.container {
+  color: colors.$primaryColor;
+  font-size: 50px;
+
+  @media screen and (max-width: sizes.$md) {
+    font-size: 30px;
+  }
+}

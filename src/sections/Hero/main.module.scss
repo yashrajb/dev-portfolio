@@ -1,0 +1,59 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+
+.main {
+  background-color: colors.$primaryBackground;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+    both;
+  .greetings {
+    color: colors.$primaryColor;
+    font-size: 45px;
+    padding: 0px;
+    margin-top: -60px;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: sizes.$md) {
+      margin-top: -200px;
+    }
+  }
+
+  .headline {
+    font-size: 70px;
+    color: colors.$primaryColor;
+    margin-bottom: 17px;
+    margin-top: 0px;
+  }
+
+  .btn {
+    margin-right: 15px;
+  }
+
+  @keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+  @media screen and (max-width: sizes.$md) {
+    .greetings {
+      font-size: 20px;
+    }
+
+    .headline {
+      font-size: 25px;
+    }
+  }
+}

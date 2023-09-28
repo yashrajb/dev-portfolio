@@ -1,0 +1,47 @@
+@use "@app/styles/variables/colors.module";
+@use "@app/styles/variables/sizes.module";
+
+.workHistory {
+  padding: 30px 0px;
+  background-color: colors.$secondaryBackground;
+  .experience {
+    padding-top: 40px;
+
+    .date {
+      color: colors.$paraColor;
+      margin: 5px 0px;
+    }
+
+    .description {
+      display: none;
+      margin: 10px 0px;
+      color: colors.$paraColor;
+    }
+
+    .points {
+      list-style-type: disc;
+      .point {
+        margin-top: 7px;
+        font-size: 27px;
+        color: colors.$paraColor;
+      }
+    }
+
+    @media screen and (max-width: sizes.$md) {
+      .title {
+        font-size: 20px !important;
+        font-weight: unset;
+      }
+      .points {
+        display: none;
+      }
+      .date {
+        font-size: 16px;
+      }
+      .description {
+        display: block;
+        font-size: 16px;
+      }
+    }
+  }
+}
