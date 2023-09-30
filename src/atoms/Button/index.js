@@ -6,8 +6,10 @@ import { Link } from "gatsby"
 export default ({ children, to, href, className = "", ...otherProps }) => {
   let classes = clsx([to || href ? styles.link : styles.btn, className])
   let props = {
-    ...otherProps,
+   
   }
+
+  console.log("Hello wordl");
 
   if (to) {
     return (
